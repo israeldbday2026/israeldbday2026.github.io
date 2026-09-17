@@ -1,0 +1,122 @@
+html, body {
+    font-family: 'Jost', sans-serif;
+    padding: 30px;
+}
+
+.header {
+    display: block;
+    width: 960px;
+    height: 100px;
+    margin: 0 auto;
+    line-height: 40px;
+    background: url('technion-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.header h1 {
+    display: inline-block;
+    color: white;
+    background-color: rgba(32, 32, 32, 0.5);
+    margin-left: 20px;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.container {
+    display: grid;
+    width: 960px;
+    margin: 60px auto;
+    grid-template-columns: 1fr 3fr;
+}
+
+.sidebar {
+    text-align: center;
+    font-weight: 200;
+    line-height: 2;
+}
+
+.sidebar a {
+    padding: 5px;
+    color: gray;
+    text-decoration: none;
+}
+
+.notice {
+    background-color: #D59F0F;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.sidebar .active {
+    color: #D59F0F;
+}
+
+.content a {
+    color: #D59F0F;
+}
+
+.notice a {
+    color: black;
+}
+
+.schedule-time:not(:first-child) {
+    margin-top: 20px;
+}
+
+.schedule-time {
+    color: #D59F0F;
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+.schedule-item {
+    background-color: #dddddd;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+
+#map {
+    height: 180px;
+}
+
+.footer {
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+    border-top: 1px solid #eeeeee;
+    color: #787878;
+    text-align: center;
+    padding: 20px;
+}
+
+.toggle {
+    display: none;
+}
+
+.toggle-label {
+    cursor: pointer;
+}
+
+.toggle-label::after {
+    content: '\25BE';
+    margin-left: 5px;
+}
+
+.toggle:checked ~ .toggle-label::after {
+    content: '\25B4';
+}
+
+.collapse {
+    display: none;
+    max-height: 0;
+}
+
+.toggle:checked ~ .collapse {
+    display: inline-block;
+    max-height: 100vh;
+}
+
+.toggle:checked ~ .keynote-author {
+    font-weight: bold;
+}
