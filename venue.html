@@ -21,17 +21,29 @@
     <div class="container">
         <div class="sidebar">
             <a href="index.html">HOME</a><br>
-            <!-- <a href="program.html">PROGRAM</a><br>
-            <a href="#" class="active">VENUE</a><br> -->
+            <a href="program.html">PROGRAM</a><br>
+            <a href="#" class="active">VENUE</a><br>
         </div>
         <div class="content">
-            <!-- <div id="map"></div><br> -->
-            This year's Israel Database Day is hosted at the Technion &mdash; Israel Institute of Technology in Haifa.
-            Additional details will be published soon.
+            <div class="notice">
+                ⓘ If you plan to arrive by car, please check later for a form to register for parking.</a>
+            </div>
+            <div id="map"></div><br>
+            This year's Israel Database Day is hosted at the Technion &mdash; Israel Institute of Technology in Haifa, in the <strong>Taub Building</strong>.<br>
         </div>
     </div>
     <div class="footer">
         Technion &mdash; Israel Institute of Technology
     </div>
+    <script>
+        var map = L.map('map').setView([32.777754368518295, 35.02164421858668], 16);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        var marker = L.marker([32.777754368518295, 35.02164421858668]).addTo(map);
+        marker.bindPopup("Taub Building").openPopup();
+    </script>
 </body>
 </html>
